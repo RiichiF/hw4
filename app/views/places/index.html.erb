@@ -1,5 +1,7 @@
 <h1>Places</h1>
 
+
+<% if @current_user != nil %>
 <p>
   <a href="/places/new">New place</a>
 </p>
@@ -9,4 +11,9 @@
     <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
   <% end %>
 </ul>
+
+<% else %>
+  Log in please
+
+<% end %>
 
